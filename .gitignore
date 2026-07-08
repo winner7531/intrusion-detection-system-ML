@@ -13,3 +13,6 @@ archive/
 
 # Generated arrays
 *.npy
+
+#graph
+*.feature_importance.png
