@@ -5,7 +5,17 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
 import joblib
 import json
-df = pd.read_csv("archive/Wednesday-workingHours.pcap_ISCX.csv")
+files = [
+    "archive/Monday-WorkingHours.pcap_ISCX.csv",
+    "archive/Tuesday-WorkingHours.pcap_ISCX.csv",
+    "archive/Wednesday-workingHours.pcap_ISCX.csv",
+    "archive/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+    "archive/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv"
+]
+
+dfs = [pd.read_csv(f) for f in files]
+
+df = pd.concat(dfs, ignore_index=True)
 df.columns = df.columns.str.strip()
 print("Dataset Shape", df.head())
 print("\n")

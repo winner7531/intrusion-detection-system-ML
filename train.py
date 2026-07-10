@@ -21,7 +21,7 @@ def train(X_train, y_train):
     print("training radnom forest")
     model = RandomForestClassifier(
         n_estimators=100,
-        #max_depth=20,
+        max_depth=20,
         n_jobs=-1,              
         random_state=42,
         class_weight="balanced", 
