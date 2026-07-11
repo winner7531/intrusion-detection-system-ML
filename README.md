@@ -24,6 +24,7 @@ Current attack classes:
 - Feature importance analysis
 - Model serialization using Joblib
 - Ready for Flask deployment
+- Working flask dashboard
 
 ## Dataset
 
@@ -31,7 +32,7 @@ Dataset: CICIDS2017
 
 Current training file:
 
-- Wednesday-workingHours.pcap_ISCX.csv
+- Whole CICIDS2017 dataset
 
 ## Project Structure
 
@@ -95,9 +96,7 @@ python visualize.py
 
 ## Future Improvements
 
-- Flask web interface
 - Real-time traffic classification
-- Train on complete CICIDS2017 dataset
 - Compare Random Forest with XGBoost and other models
 - Improved handling of class imbalance
 
