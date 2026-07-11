@@ -22,9 +22,7 @@ print(f"Model loaded. Expects {model.n_features_in_} features.")
 def build_feature_vector(features_dict: dict) -> np.ndarray:
     """
     Turn a {feature_name: value} dict from the request into a properly
-    ordered 1-row array matching training column order. Missing keys
-    default to 0 instead of crashing, since a frontend field being
-    empty shouldn't 500 the whole request.
+    ordered 1-row array matching training column order. 
     """
     row = [float(features_dict.get(name, 0) or 0) for name in FEATURE_NAMES]
     return np.array([row])  # shape (1, n_features) — scaler/model expect 2D

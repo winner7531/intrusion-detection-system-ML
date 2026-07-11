@@ -42,43 +42,16 @@
             </div>
           </div>
           <form id="predictForm" class="feature-form">
-            <label>
-              Flow Duration
-              <input name="flow duration" type="number" value="305">
-            </label>
-            <label>
-              Total Fwd Packets
-              <input name="total fwd packets" type="number" value="30">
-            </label>
-            <label>
-              Total Backward Packets
-              <input name="total backward packets" type="number" value="19">
-            </label>
-            <label>
-              Flow Bytes/s
-              <input name="flow bytes/s" type="number" value="2150">
-            </label>
-            <label>
-              Flow Packets/s
-              <input name="flow packets/s" type="number" step="0.01" value="0.16">
-            </label>
-            <label>
-              Packet Length Mean
-              <input name="packet length mean" type="number" value="76">
-            </label>
-            <label>
-              SYN Flag Count
-              <input name="syn flag count" type="number" value="1">
-            </label>
-            <label>
-              ACK Flag Count
-              <input name="ack flag count" type="number" value="1">
+            <label class="full-width">
+              Feature JSON file
+              <input id="featureFile" name="featureFile" type="file" accept="application/json,.json">
             </label>
             <button class="primary full" type="submit">Run Prediction</button>
           </form>
           <p class="form-note">
-            Any features not shown here are sent as 0. The model expects
-            <span id="featureCount">-</span> total features.
+            Upload a JSON object of <span id="featureCount">-</span> feature
+            name/value pairs, e.g. <code>{"Destination Port": 80, "Flow Duration": 38308, ...}</code>.
+            Any features left out are sent as 0.
           </p>
         </article>
 

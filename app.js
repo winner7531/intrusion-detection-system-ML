@@ -28,20 +28,37 @@ async function loadStatus() {
   }
 }
 
+function readFileAsJson(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        resolve(JSON.parse(reader.result));
+      } catch (err) {
+        reject(new Error("File is not valid JSON"));
+      }
+    };
+    reader.onerror = () => reject(new Error("Could not read file"));
+    reader.readAsText(file);
+  });
+}
+
 async function submitPrediction(event) {
   event.preventDefault();
-  const form = new FormData(event.target);
-  const payload = { features: {} };
+  const fileInput = qs("#featureFile");
+  const file = fileInput.files[0];
 
-  for (const [key, value] of form.entries()) {
-    payload.features[key] = Number(value);
+  if (!file) {
+    qs("#predictionResult").textContent = "Error: choose a JSON file first.";
+    return;
   }
 
   qs("#predictionResult").textContent = "Running...";
   try {
+    const features = await readFileAsJson(file);
     const result = await api("/api/predict", {
       method: "POST",
-      body: JSON.stringify(payload),
+      body: JSON.stringify({ features }),
     });
     qs("#predictionResult").textContent = JSON.stringify(result, null, 2);
   } catch (err) {
