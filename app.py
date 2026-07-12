@@ -6,7 +6,7 @@ from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  # allow your frontend to call this from a different origin/port
+CORS(app)  
 
 # --- load model artifacts once at startup ---
 model = joblib.load("model.pkl")

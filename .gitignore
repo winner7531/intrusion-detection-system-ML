@@ -15,4 +15,17 @@ archive/
 *.npy
 
 #graph
-*.feature_importance.png
+feature_importance.png
+
+# Models
+*.pkl
+
+# Sample files
+sample_*.json
+sample_jsons/
+
+# Visualizations
+feature_importance.png
+
+# Jupyter
+*.ipynb
