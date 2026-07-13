@@ -48,13 +48,13 @@ IDS/
 └── archive/
 ```
 ## Dashboard
-![Dashboard](SreenShots/Screenshot 2026-07-12 222234.png)
+![Dashboard](SreenShots/Dashboard.png)
 
 ## Prediction example
-![Prediction](ScreenShots/Screenshot 2026-07-12 222309.png)
+![Prediction](ScreenShots/Prediction.png)
 
 ## Feature Importance
-![Feature Importance](screenshots/Screenshot%202026-07-12%20222325.png)
+![Feature Importance](ScreenShots/Featureimportance.png)
 
 ## Results
 
