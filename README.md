@@ -54,7 +54,7 @@ IDS/
 ![Prediction](ScreenShots/Screenshot 2026-07-12 222309.png)
 
 ## Feature Importance
-![Feature Importance](ScreenShots/Screenshot 2026-07-12 222325.png)
+![Feature Importance](screenshots/Screenshot%202026-07-12%20222325.png)
 
 ## Results
 
