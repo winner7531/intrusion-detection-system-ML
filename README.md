@@ -4,7 +4,7 @@ Machine Learning based Intrusion Detection System built using the CICIDS2017 dat
 
 ## Overview
 
-This project detects and classifies network traffic into benign and attack categories using a Random Forest classifier.
+This project reads the uploaded json file of a flow and predicts if its normal or any suspicious attack.
 
 Current attack classes:
 
@@ -23,8 +23,8 @@ Current attack classes:
 - Random Forest classification
 - Feature importance analysis
 - Model serialization using Joblib
-- Ready for Flask deployment
-- Working flask dashboard
+- Flask deployment
+- WOrking Dashboard
 
 ## Dataset
 
@@ -47,6 +47,14 @@ IDS/
 ├── model.pkl
 └── archive/
 ```
+## Dashboard
+![Dashboard](SreenShots/Screenshot-2026-07-12-222234.png)
+
+## Prediction example
+![Prediction](ScreenShots/Screenshot-2026-07-12-222309.png)
+
+## Feature Importance
+![Feature Importance](ScreenShots/Screenshot-2026-07-12-222325.png)
 
 ## Results
 
@@ -98,7 +106,6 @@ python visualize.py
 
 - Real-time traffic classification
 - Compare Random Forest with XGBoost and other models
-- Improved handling of class imbalance
 
 ## Author
 
